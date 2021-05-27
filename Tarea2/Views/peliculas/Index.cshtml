@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Tarea2.Models.pelicula>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.duracion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.clasificacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estudio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.director)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.genero)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.fecha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.duracion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.clasificacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estudio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.director)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.genero)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.nombre }) |
+            @Html.ActionLink("Details", "Details", new { id=item.nombre }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.nombre })
+        </td>
+    </tr>
+}
+
+</table>

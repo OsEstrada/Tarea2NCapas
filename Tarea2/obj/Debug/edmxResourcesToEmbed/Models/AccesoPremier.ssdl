@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="premierModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="acceso_premier">
+    <Key>
+      <PropertyRef Name="idapremier" />
+    </Key>
+    <Property Name="idapremier" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre_pelicula" Type="varchar" MaxLength="40" />
+    <Property Name="idpersona" Type="int" />
+  </EntityType>
+  <EntityType Name="pelicula">
+    <Key>
+      <PropertyRef Name="nombre" />
+    </Key>
+    <Property Name="nombre" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="fecha" Type="date" />
+    <Property Name="duracion" Type="time" Precision="7" />
+    <Property Name="clasificacion" Type="varchar" MaxLength="10" />
+    <Property Name="estudio" Type="varchar" MaxLength="60" />
+    <Property Name="director" Type="varchar" MaxLength="40" />
+    <Property Name="genero" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="persona">
+    <Key>
+      <PropertyRef Name="idpersona" />
+    </Key>
+    <Property Name="idpersona" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="40" />
+    <Property Name="apellido" Type="varchar" MaxLength="40" />
+    <Property Name="edad" Type="smallint" />
+    <Property Name="telefono" Type="varchar" MaxLength="20" />
+    <Property Name="idrol" Type="int" />
+  </EntityType>
+  <EntityType Name="rol">
+    <Key>
+      <PropertyRef Name="idrol" />
+    </Key>
+    <Property Name="idrol" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="40" />
+    <Property Name="descripcion" Type="varchar" MaxLength="100" />
+    <Property Name="estado" Type="bit" />
+  </EntityType>
+  <Association Name="FK__acceso_pr__idper__3F466844">
+    <End Role="persona" Type="Self.persona" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="acceso_premier" Type="Self.acceso_premier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="persona">
+        <PropertyRef Name="idpersona" />
+      </Principal>
+      <Dependent Role="acceso_premier">
+        <PropertyRef Name="idpersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__acceso_pr__nombr__3E52440B">
+    <End Role="pelicula" Type="Self.pelicula" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="acceso_premier" Type="Self.acceso_premier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pelicula">
+        <PropertyRef Name="nombre" />
+      </Principal>
+      <Dependent Role="acceso_premier">
+        <PropertyRef Name="nombre_pelicula" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__persona__idrol__398D8EEE">
+    <End Role="rol" Type="Self.rol" Multiplicity="0..1" />
+    <End Role="persona" Type="Self.persona" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="rol">
+        <PropertyRef Name="idrol" />
+      </Principal>
+      <Dependent Role="persona">
+        <PropertyRef Name="idrol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="premierModelStoreContainer">
+    <EntitySet Name="acceso_premier" EntityType="Self.acceso_premier" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pelicula" EntityType="Self.pelicula" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="persona" EntityType="Self.persona" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="rol" EntityType="Self.rol" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__acceso_pr__idper__3F466844" Association="Self.FK__acceso_pr__idper__3F466844">
+      <End Role="persona" EntitySet="persona" />
+      <End Role="acceso_premier" EntitySet="acceso_premier" />
+    </AssociationSet>
+    <AssociationSet Name="FK__acceso_pr__nombr__3E52440B" Association="Self.FK__acceso_pr__nombr__3E52440B">
+      <End Role="pelicula" EntitySet="pelicula" />
+      <End Role="acceso_premier" EntitySet="acceso_premier" />
+    </AssociationSet>
+    <AssociationSet Name="FK__persona__idrol__398D8EEE" Association="Self.FK__persona__idrol__398D8EEE">
+      <End Role="rol" EntitySet="rol" />
+      <End Role="persona" EntitySet="persona" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

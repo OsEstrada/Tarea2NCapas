@@ -1,0 +1,58 @@
+﻿@model Tarea2.Models.persona
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>persona</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.edad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.edad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rol.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rol.nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idpersona }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
