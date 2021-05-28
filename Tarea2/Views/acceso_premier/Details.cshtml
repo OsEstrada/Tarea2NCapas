@@ -4,14 +4,13 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Detalle Acceso Premier</h2>
 
 <div>
-    <h4>acceso_premier</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.persona.nombre)
+            @Html.DisplayNameFor(model => model.persona.nombre).ToString().ToUpper()
         </dt>
 
         <dd>
@@ -19,16 +18,16 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.pelicula.clasificacion)
+            @Html.DisplayNameFor(model => model.pelicula).ToString().ToUpper()
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.pelicula.clasificacion)
+            @Html.DisplayFor(model => model.pelicula.nombre)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.idapremier }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idapremier }) |
+    @Html.ActionLink("Regresar", "Index")
 </p>

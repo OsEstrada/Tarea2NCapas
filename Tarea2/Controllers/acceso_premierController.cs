@@ -40,7 +40,7 @@ namespace Tarea2.Controllers
         public ActionResult Create()
         {
             ViewBag.idpersona = new SelectList(db.persona, "idpersona", "nombre");
-            ViewBag.nombre_pelicula = new SelectList(db.pelicula, "nombre", "clasificacion");
+            ViewBag.nombre_pelicula = new SelectList(db.pelicula, "nombre", "nombre");
             return View();
         }
 
@@ -59,7 +59,7 @@ namespace Tarea2.Controllers
             }
 
             ViewBag.idpersona = new SelectList(db.persona, "idpersona", "nombre", acceso_premier.idpersona);
-            ViewBag.nombre_pelicula = new SelectList(db.pelicula, "nombre", "clasificacion", acceso_premier.nombre_pelicula);
+            ViewBag.nombre_pelicula = new SelectList(db.pelicula, "nombre", "nombre", acceso_premier.nombre_pelicula);
             return View(acceso_premier);
         }
 
@@ -76,7 +76,7 @@ namespace Tarea2.Controllers
                 return HttpNotFound();
             }
             ViewBag.idpersona = new SelectList(db.persona, "idpersona", "nombre", acceso_premier.idpersona);
-            ViewBag.nombre_pelicula = new SelectList(db.pelicula, "nombre", "clasificacion", acceso_premier.nombre_pelicula);
+            ViewBag.nombre_pelicula = new SelectList(db.pelicula, "nombre", "nombre", acceso_premier.nombre_pelicula);
             return View(acceso_premier);
         }
 
@@ -94,7 +94,7 @@ namespace Tarea2.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.idpersona = new SelectList(db.persona, "idpersona", "nombre", acceso_premier.idpersona);
-            ViewBag.nombre_pelicula = new SelectList(db.pelicula, "nombre", "clasificacion", acceso_premier.nombre_pelicula);
+            ViewBag.nombre_pelicula = new SelectList(db.pelicula, "nombre", "nombre", acceso_premier.nombre_pelicula);
             return View(acceso_premier);
         }
 

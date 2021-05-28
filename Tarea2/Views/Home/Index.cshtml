@@ -2,30 +2,51 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<div class="jumbotron row" style="display:flex; flex-direction:row; justify-content: space-between">
+    <div class="col-md-7" style="justify-content: space-between">
+        <h1 style="font-weight:bold">BIENVENIDO</h1>
+        <h2  style="color: #57050b; font-size: 3.5rem" class="lead">Sistema de mantenimiento para acceso premiere</h2>
+    </div>
+    <div class="col-md-3">
+        <img class="img-responsive img-circle" src="~/Resources/logo.jpg" alt="Alternate Text" />
+    </div>
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <div class="thumbnail">
+            <img  src="~/Resources/personas.jpg" height="" alt="Personas" />
+            <div class="caption">
+                <h2>@Html.ActionLink("Personas", "Index", "personas")</h2>
+                <p>Mantenimiento para personas.</p>
+            </div>
+        </div>
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <div class="thumbnail">
+            <img src="~/Resources/peliculas.jpeg" alt="peliculas" />
+            <div class="caption">
+                <h2>@Html.ActionLink("Peliculas", "Index", "peliculas")</h2>
+                <p>Mantenimiento para peliculas.</p>
+            </div>
+        </div>
     </div>
     <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <div class="thumbnail">
+            <img src="~/Resources/access.jpg" alt="cine" />
+            <div class="caption">
+                <h2>@Html.ActionLink("Acceso Premier", "Index", "acceso_premier")</h2>
+                <p>Mantenimiento para acceso premier de peliculas.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="thumbnail">
+            <img src="~/Resources/rol.jpg" alt="roles" />
+            <div class="caption">
+                <h2>@Html.ActionLink("Roles", "Index", "rols")</h2>
+                <p>Mantenimiento para roles.</p>
+            </div>
+        </div>
     </div>
 </div>

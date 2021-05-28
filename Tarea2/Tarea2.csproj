@@ -184,6 +184,11 @@
       <DependentUpon>AccesoPremier.edmx</DependentUpon>
       <LastGenOutput>AccesoPremier.cs</LastGenOutput>
     </Content>
+    <Content Include="Resources\access.jpg" />
+    <Content Include="Resources\Logo.jpg" />
+    <Content Include="Resources\peliculas.jpeg" />
+    <Content Include="Resources\personas.jpg" />
+    <Content Include="Resources\rol.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="Models\AccesoPremier.edmx">
@@ -215,8 +220,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\rols\Create.cshtml" />
     <Content Include="Views\rols\Delete.cshtml" />

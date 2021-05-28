@@ -1,61 +1,61 @@
 ﻿@model IEnumerable<Tarea2.Models.pelicula>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Peliculas";
 }
 
-<h2>Index</h2>
+<h2>@ViewBag.Title</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Crear Nuevo", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.fecha)
+            @Html.DisplayNameFor(model => model.fecha).ToString().ToUpper()
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.duracion)
+            @Html.DisplayNameFor(model => model.duracion).ToString().ToUpper()
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.clasificacion)
+            @Html.DisplayNameFor(model => model.clasificacion).ToString().ToUpper()
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.estudio)
+            @Html.DisplayNameFor(model => model.estudio).ToString().ToUpper()
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.director)
+            @Html.DisplayNameFor(model => model.director).ToString().ToUpper()
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.genero)
+            @Html.DisplayNameFor(model => model.genero).ToString().ToUpper()
         </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
-        <td>
+        <td style="vertical-align:middle">
             @Html.DisplayFor(modelItem => item.fecha)
         </td>
-        <td>
+        <td style="vertical-align:middle">
             @Html.DisplayFor(modelItem => item.duracion)
         </td>
-        <td>
+        <td style="vertical-align:middle">
             @Html.DisplayFor(modelItem => item.clasificacion)
         </td>
-        <td>
+        <td style="vertical-align:middle">
             @Html.DisplayFor(modelItem => item.estudio)
         </td>
-        <td>
+        <td style="vertical-align:middle">
             @Html.DisplayFor(modelItem => item.director)
         </td>
-        <td>
+        <td style="vertical-align:middle">
             @Html.DisplayFor(modelItem => item.genero)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.nombre }) |
-            @Html.ActionLink("Details", "Details", new { id=item.nombre }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.nombre })
+        <td style="vertical-align:middle">
+            @Html.ActionLink("Editar", "Edit", new { id=item.nombre },  new { @class = "btn btn-primary" })
+            @Html.ActionLink("Detalles", "Details", new { id=item.nombre }, new { @class = "btn btn-info" })
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.nombre }, new { @class = "btn btn-danger" })
         </td>
     </tr>
 }

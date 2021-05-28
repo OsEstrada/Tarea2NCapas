@@ -4,14 +4,13 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Detalle Pelicula</h2>
 
 <div>
-    <h4>pelicula</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.fecha)
+            @Html.DisplayNameFor(model => model.fecha).ToString().ToUpper()
         </dt>
 
         <dd>
@@ -19,7 +18,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.duracion)
+            @Html.DisplayNameFor(model => model.duracion).ToString().ToUpper()
         </dt>
 
         <dd>
@@ -27,7 +26,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.clasificacion)
+            @Html.DisplayNameFor(model => model.clasificacion).ToString().ToUpper()
         </dt>
 
         <dd>
@@ -35,7 +34,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.estudio)
+            @Html.DisplayNameFor(model => model.estudio).ToString().ToUpper()
         </dt>
 
         <dd>
@@ -43,7 +42,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.director)
+            @Html.DisplayNameFor(model => model.director).ToString().ToUpper()
         </dt>
 
         <dd>
@@ -51,7 +50,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.genero)
+            @Html.DisplayNameFor(model => model.genero).ToString().ToUpper()
         </dt>
 
         <dd>
@@ -61,6 +60,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.nombre }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.nombre }) |
+    @Html.ActionLink("Regresar", "Index")
 </p>

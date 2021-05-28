@@ -1,43 +1,42 @@
 ﻿@model IEnumerable<Tarea2.Models.rol>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Roles";
 }
 
-<h2>Index</h2>
-
+<h2>@ViewBag.Title</h2>
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Crear Nuevo", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.nombre)
+            @Html.DisplayNameFor(model => model.nombre).ToString().ToUpper()
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.descripcion)
+            @Html.DisplayNameFor(model => model.descripcion).ToString().ToUpper()
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.estado)
+            @Html.DisplayNameFor(model => model.estado).ToString().ToUpper()
         </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
-        <td>
+        <td style="vertical-align:middle">
             @Html.DisplayFor(modelItem => item.nombre)
         </td>
-        <td>
+        <td style="vertical-align:middle">
             @Html.DisplayFor(modelItem => item.descripcion)
         </td>
-        <td>
+        <td style="vertical-align:middle">
             @Html.DisplayFor(modelItem => item.estado)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.idrol }) |
-            @Html.ActionLink("Details", "Details", new { id=item.idrol }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.idrol })
+        <td style="vertical-align:middle">
+            @Html.ActionLink("Editar", "Edit", new { id=item.idrol }, new { @class = "btn btn-primary" })
+            @Html.ActionLink("Detalles", "Details", new { id=item.idrol }, new { @class = "btn btn-info" })
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.idrol }, new { @class = "btn btn-danger" })
         </td>
     </tr>
 }
