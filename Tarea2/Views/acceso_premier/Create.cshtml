@@ -15,6 +15,7 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
+            <!--Label se capitalizara-->
             @Html.LabelFor(model => model.nombre_pelicula, "Nombre Pelicula", htmlAttributes: new { @class = "control-label col-md-2 text-capitalize" })
             <div class="col-md-10">
                 @Html.DropDownList("nombre_pelicula", null, htmlAttributes: new { @class = "form-control" })
@@ -23,6 +24,7 @@
         </div>
 
         <div class="form-group">
+            <!--Label se capitalizara-->
             @Html.LabelFor(model => model.idpersona, "Persona", htmlAttributes: new { @class = "control-label col-md-2 text-capitalize" })
             <div class="col-md-10">
                 @Html.DropDownList("idpersona", null, htmlAttributes: new { @class = "form-control" })
@@ -30,6 +32,7 @@
             </div>
         </div>
 
+        <!--Boton guardar-->
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Guardar" class="btn btn-default" />
@@ -39,6 +42,7 @@
 }
 
 <div>
+    <!--Enlace para regresar-->
     @Html.ActionLink("Regresar", "Index")
 </div>
 

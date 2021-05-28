@@ -2,48 +2,65 @@
     ViewBag.Title = "Home Page";
 }
 
+<!--Contenedor del encabezado-->
 <div class="jumbotron row" style="display:flex; flex-direction:row; justify-content: space-between">
+    <!--Contenedor Titulo-->
     <div class="col-md-7" style="justify-content: space-between">
         <h1 style="font-weight:bold">BIENVENIDO</h1>
         <h2  style="color: #57050b; font-size: 3.5rem" class="lead">Sistema de mantenimiento para acceso premiere</h2>
     </div>
+    <!--Contenedor logo-->
     <div class="col-md-3">
+        <!--Logotipo-->
         <img class="img-responsive img-circle" src="~/Resources/logo.jpg" alt="Alternate Text" />
     </div>
 </div>
 
+<!--Contenedor de seccion principal-->
 <div class="row">
+    <!--Tarjeta Persona-->
     <div class="col-md-4">
         <div class="thumbnail">
-            <img  src="~/Resources/personas.jpg" height="" alt="Personas" />
+            <!--Imagen mostrada en tarjeta personas-->
+            <img src="~/Resources/personas.jpg" alt="Personas" />
             <div class="caption">
+                <!--Enlace a Index de personas-->
                 <h2>@Html.ActionLink("Personas", "Index", "personas")</h2>
                 <p>Mantenimiento para personas.</p>
             </div>
         </div>
     </div>
+    <!--Tarjeta Peliculas-->
     <div class="col-md-4">
         <div class="thumbnail">
+            <!--Imagen mostrada en tarjeta peliculas-->
             <img src="~/Resources/peliculas.jpeg" alt="peliculas" />
             <div class="caption">
+                <!--Enlace a Index de peliculas-->
                 <h2>@Html.ActionLink("Peliculas", "Index", "peliculas")</h2>
                 <p>Mantenimiento para peliculas.</p>
             </div>
         </div>
     </div>
+    <!--Tarjeta Cine-->
     <div class="col-md-4">
         <div class="thumbnail">
+            <!--Imagen mostrada en tarjeta acceso-->
             <img src="~/Resources/access.jpg" alt="cine" />
             <div class="caption">
+                <!--Enlace a Index de acceso premier-->
                 <h2>@Html.ActionLink("Acceso Premier", "Index", "acceso_premier")</h2>
                 <p>Mantenimiento para acceso premier de peliculas.</p>
             </div>
         </div>
     </div>
+    <!--Tarjeta Roles-->
     <div class="col-md-4">
         <div class="thumbnail">
+            <!--Imagen mostrada en tarjeta roles-->
             <img src="~/Resources/rol.jpg" alt="roles" />
             <div class="caption">
+                <!--Enlace a Index de roles-->
                 <h2>@Html.ActionLink("Roles", "Index", "rols")</h2>
                 <p>Mantenimiento para roles.</p>
             </div>

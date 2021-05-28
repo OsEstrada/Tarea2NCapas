@@ -15,7 +15,10 @@ namespace Tarea2.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            //Datos que se mostraran en vista About
+            ViewBag.Message = "Tarea 2 Programacion N-Capas";
+            ViewBag.Nombre = "Oscar Alejandro Estrada Corena";
+            ViewBag.Carnet = "00064318";
 
             return View();
         }

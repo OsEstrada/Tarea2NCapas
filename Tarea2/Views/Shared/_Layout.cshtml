@@ -9,6 +9,7 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
+    <!--Menu superior-->
     <div class="navbar navbar-inverse navbar-fixed-top" style="background-color: #280b38;">
         <div class="container">
             <div class="navbar-header">
@@ -20,16 +21,25 @@
                 @Html.ActionLink("Acceso Premier", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
+                <!--Lista de elementos. Hay un enlace a la pagina de inicio, a los datos acerca de mi y a los modulos del crud (Personas, Peliculas, Roles y Acceso Premier)-->
                 <ul class="nav navbar-nav">
+                    <!--Emñace a Inicio-->
                     <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+                    <!--Emñace a Personas-->
                     <li>@Html.ActionLink("Personas", "Index", "personas")</li>
+                    <!--Emñace a Peliculas-->
                     <li>@Html.ActionLink("Peliculas", "Index", "peliculas")</li>
+                    <!--Emñace a Acceso premier-->
                     <li>@Html.ActionLink("Acceso Premier", "Index", "acceso_premier")</li>
+                    <!--Emñace a Roles-->
                     <li>@Html.ActionLink("Roles", "Index", "rols")</li>
+                    <!--Emñace a Acerca de-->
+                    <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
                 </ul>
             </div>
         </div>
     </div>
+    <!--Contenedor principal, aca se renderiza cada una de las vistas de la pagina web-->
     <div class="container body-content">
         @RenderBody()
         <hr />

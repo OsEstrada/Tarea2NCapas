@@ -15,6 +15,7 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
+            <!--Label se capitalizara-->
             @Html.LabelFor(model => model.nombre, htmlAttributes: new { @class = "control-label col-md-2 text-capitalize"})
             <div class="col-md-10">
                 @Html.EditorFor(model => model.nombre, new { htmlAttributes = new { @class = "form-control" } })
@@ -23,6 +24,7 @@
         </div>
 
         <div class="form-group">
+            <!--Label se capitalizara-->
             @Html.LabelFor(model => model.fecha, htmlAttributes: new { @class = "control-label col-md-2 text-capitalize" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.fecha, new { htmlAttributes = new { @class = "form-control" } })
@@ -31,6 +33,7 @@
         </div>
 
         <div class="form-group">
+            <!--Label se capitalizara-->
             @Html.LabelFor(model => model.duracion, htmlAttributes: new { @class = "control-label col-md-2 text-capitalize" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.duracion, new { htmlAttributes = new { @class = "form-control " } })
@@ -39,6 +42,7 @@
         </div>
 
         <div class="form-group">
+            <!--Label se capitalizara-->
             @Html.LabelFor(model => model.clasificacion, htmlAttributes: new { @class = "control-label col-md-2 text-capitalize" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.clasificacion, new { htmlAttributes = new { @class = "form-control" } })
@@ -47,6 +51,7 @@
         </div>
 
         <div class="form-group">
+            <!--Label se capitalizara-->
             @Html.LabelFor(model => model.estudio, htmlAttributes: new { @class = "control-label col-md-2 text-capitalize" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.estudio, new { htmlAttributes = new { @class = "form-control" } })
@@ -55,6 +60,7 @@
         </div>
 
         <div class="form-group">
+            <!--Label se capitalizara-->
             @Html.LabelFor(model => model.director, htmlAttributes: new { @class = "control-label col-md-2 text-capitalize" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.director, new { htmlAttributes = new { @class = "form-control" } })
@@ -63,6 +69,7 @@
         </div>
 
         <div class="form-group">
+            <!--Label se capitalizara-->
             @Html.LabelFor(model => model.genero, htmlAttributes: new { @class = "control-label col-md-2 text-capitalize" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.genero, new { htmlAttributes = new { @class = "form-control" } })
@@ -70,6 +77,7 @@
             </div>
         </div>
 
+        <!--Boton guardar-->
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Guardar" class="btn btn-default" />
@@ -77,7 +85,7 @@
         </div>
     </div>
 }
-
+<!--Enlace para regresar-->
 <div>
     @Html.ActionLink("Regresar", "Index")
 </div>

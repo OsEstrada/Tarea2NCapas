@@ -9,6 +9,7 @@
 <h3>¿Estas seguro que deseas eliminar este elemento</h3>
 <div>
     <hr />
+    <!--Cada uno de los titulos se haran mayusculas para mejorar el estilo-->
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.nombre).ToString().ToUpper()
@@ -56,6 +57,7 @@
     {
         @Html.AntiForgeryToken()
 
+        <!--Enlace para regresar-->
         <div class="form-actions no-color">
             <input type="submit" value="Eliminar" class="btn btn-default" /> |
             @Html.ActionLink("Regresar", "Index")

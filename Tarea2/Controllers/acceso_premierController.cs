@@ -40,6 +40,7 @@ namespace Tarea2.Controllers
         public ActionResult Create()
         {
             ViewBag.idpersona = new SelectList(db.persona, "idpersona", "nombre");
+            //Aca se realizo un cambio, esto mostraba la clasificacion en lugar del nombre de la pelicula, de modo que se cambio para si muestre el nombre
             ViewBag.nombre_pelicula = new SelectList(db.pelicula, "nombre", "nombre");
             return View();
         }
@@ -59,6 +60,7 @@ namespace Tarea2.Controllers
             }
 
             ViewBag.idpersona = new SelectList(db.persona, "idpersona", "nombre", acceso_premier.idpersona);
+            //Aca se realizo un cambio, esto mostraba la clasificacion en lugar del nombre de la pelicula, de modo que se cambio para si muestre el nombre
             ViewBag.nombre_pelicula = new SelectList(db.pelicula, "nombre", "nombre", acceso_premier.nombre_pelicula);
             return View(acceso_premier);
         }
@@ -76,6 +78,7 @@ namespace Tarea2.Controllers
                 return HttpNotFound();
             }
             ViewBag.idpersona = new SelectList(db.persona, "idpersona", "nombre", acceso_premier.idpersona);
+            //Aca se realizo un cambio, esto mostraba la clasificacion en lugar del nombre de la pelicula, de modo que se cambio para si muestre el nombre
             ViewBag.nombre_pelicula = new SelectList(db.pelicula, "nombre", "nombre", acceso_premier.nombre_pelicula);
             return View(acceso_premier);
         }
@@ -94,6 +97,7 @@ namespace Tarea2.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.idpersona = new SelectList(db.persona, "idpersona", "nombre", acceso_premier.idpersona);
+            //Aca se realizo un cambio, esto mostraba la clasificacion en lugar del nombre de la pelicula, de modo que se cambio para si muestre el nombre
             ViewBag.nombre_pelicula = new SelectList(db.pelicula, "nombre", "nombre", acceso_premier.nombre_pelicula);
             return View(acceso_premier);
         }

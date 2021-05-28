@@ -7,10 +7,14 @@
 <h2>@ViewBag.Title</h2>
 
 <p>
+    <!--Enlace para crear nuevo Acceso-->
     @Html.ActionLink("Crear Nuevo", "Create")
 </p>
+
+<!--Tabla donde se desplegan los datos de la bd-->
 <table class="table">
     <tr>
+        <!--Headers de tabla-->
         <th>
             @Html.DisplayNameFor(model => model.persona.nombre).ToString().ToUpper() PERSONA
         </th>
@@ -20,20 +24,23 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td style="vertical-align:middle">
-            @Html.DisplayFor(modelItem => item.persona.nombre)
-        </td>
-        <td style="vertical-align:middle">
-            @Html.DisplayFor(modelItem => item.pelicula.nombre)
-        </td>
-        <td style="vertical-align:middle">
-            @Html.ActionLink("Editar", "Edit", new { id=item.idapremier }, new { @class = "btn btn-primary" })
-            @Html.ActionLink("Detalles", "Details", new { id=item.idapremier }, new { @class = "btn btn-info" })
-            @Html.ActionLink("Eliminar", "Delete", new { id=item.idapremier }, new { @class = "btn btn-danger" })
-        </td>
-    </tr>
-}
+    <!--Bucle que muestra cada una de las filas dentro de la tabla-->
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td style="vertical-align:middle">
+                @Html.DisplayFor(modelItem => item.persona.nombre)
+            </td>
+            <td style="vertical-align:middle">
+                @Html.DisplayFor(modelItem => item.pelicula.nombre)
+            </td>
+            <td style="vertical-align:middle">
+                <!--Botones que se dan acceso a las funciones del crud (Editar, Ver y Eliminar)-->
+                @Html.ActionLink("Editar", "Edit", new { id = item.idapremier }, new { @class = "btn btn-primary" })
+                @Html.ActionLink("Detalles", "Details", new { id = item.idapremier }, new { @class = "btn btn-info" })
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.idapremier }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
 
 </table>
